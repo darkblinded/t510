@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was automatically generated. Do not edit it as
+     your changes would be overwritten.
+     To make persistent changes to this file, please edit
+     /etc/hptc-openbox-mgr/menu.xml -->
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Desktop Menu">
+ <!-- ADMINUSR -->
+	<item label = "Administrator/User Mode Switch">
+    <action name="Execute">
+      <command>/usr/bin/sudo /usr/bin/hptc-sudo-gate /usr/bin/hptc-switch-admin</command>
+    </action>
+  </item>
+  <separator/>
+  <!-- LOGOUT -->
+	<item label = "Logout">
+    <action name="Execute">
+      <command>/usr/bin/hptc-logoff</command>
+    </action>
+  </item>
+  <!-- REBOOT -->
+	<item label = "Reboot">
+    <action name="Execute">
+      <command>/usr/bin/hptc-reboot</command>
+    </action>
+  </item>
+  <!-- POWEROFF -->
+	<item label = "Poweroff">
+    <action name="Execute">
+      <command>/usr/bin/hptc-halt</command>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
