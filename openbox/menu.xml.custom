@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was automatically generated. Do not edit it as
+     your changes would be overwritten.
+     To make persistent changes to this file, please edit
+     /etc/hptc-openbox-mgr/menu.xml -->
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Desktop Menu">
+ <!-- ADMINUSR -->
+	<item label = "Toggle custom keybindings">
+    <action name="Execute">
+        <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+    </action>
+  </item>
+ <!-- ADMINUSR -->
+	<item label = "Administrator/User Mode Switch">
+    <action name="Execute">
+      <command>/usr/bin/sudo /usr/bin/hptc-sudo-gate /usr/bin/hptc-switch-admin</command>
+    </action>
+  </item>
+
+    <separator/>
+    <item label = "dmenu">
+        <action name="Execute">
+            <command>bash -c 'env PATH="$PATH" dmenu_run'</command>
+        </action>
+    </item>
+    <item label = "Firefox">
+        <action name="Execute">
+            <command>firefox</command>
+        </action>
+    </item>
+    <item label = "xterm">
+        <action name="Execute">
+            <command>xterm</command>
+        </action>
+    </item>
+    <separator/>
+    <item label = "Restart openbox">
+        <action name="Execute">
+            <command>openbox --restart</command>
+        </action>
+    </item>
+
+  <!-- LOGOUT -->
+	<item label = "Logout">
+    <action name="Execute">
+      <command>/usr/bin/hptc-logoff</command>
+    </action>
+  </item>
+  <!-- REBOOT -->
+	<item label = "Reboot">
+    <action name="Execute">
+      <command>/usr/bin/hptc-reboot</command>
+    </action>
+  </item>
+  <!-- POWEROFF -->
+	<item label = "Poweroff">
+    <action name="Execute">
+      <command>/usr/bin/hptc-halt</command>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
