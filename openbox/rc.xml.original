@@ -118,7 +118,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>2</number>
+  <number>10</number>
   <firstdesk>1</firstdesk>
   <names>
     <!-- set names up here if you want to, like this:
@@ -126,7 +126,7 @@
     <name>desktop 2</name>
     -->
   </names>
-  <popupTime>0</popupTime>
+  <popupTime>500</popupTime>
   <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
 </desktops>
@@ -215,21 +215,25 @@
 		</keybind>
 
 		<!-- Custom keybindings -->
-        <keybind key="C-A-F12">
+
+        <!-- Universal -->
+		<keybind key="C-A-F12">
 			<action name="Execute">
                 <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
 			</action>
 		</keybind>
-		<keybind key="C-A-F9">
+        <keybind key="C-A-F9">
 			<action name="Execute">
-				<command>bash -c 'env PATH="$PATH" dmenu_run'</command>
+                <command>bash -c 'env PATH="$PATH" dmenu_run'</command>
 			</action>
 		</keybind>
-		<keybind key="C-A-F10">
+        <keybind key="C-A-F10">
 			<action name="Execute">
-				<command>xterm</command>
+                <command>urxvt</command>
 			</action>
 		</keybind>
+
+        <!-- Programs -->
 <!--
 		<keybind key="W-D">
 			<action name="Execute">
@@ -238,14 +242,21 @@
 		</keybind>
 		<keybind key="W-Return">
 			<action name="Execute">
+				<command>urxvt</command>
+			</action>
+		</keybind>
+		<keybind key="W-F1">
+			<action name="Execute">
 				<command>xterm</command>
 			</action>
 		</keybind>
-		<keybind key="W-S-R">
-			<action name="Execute">
-                <command>openbox - -restart</command>
-			</action>
-		</keybind>
+-->
+
+        <!-- OpenBox -->
+<!--
+        <keybind key="W-S-R">
+            <action name="Restart" />
+        </keybind>
 		<keybind key="W-S-Q">
 			<action name="Close"/>
 		</keybind>
@@ -269,6 +280,44 @@
 				<dialog>yes</dialog>
 			</action>
 		</keybind>
+
+        <keybind key="W-F12">
+            <action name="AddDesktop">
+                <where>current</where>
+            </action>
+        </keybind>
+
+        <keybind key="W-1">
+            <action name="GoToDesktop"><to>1</to></action>
+        </keybind>
+        <keybind key="W-2">
+            <action name="GoToDesktop"><to>2</to></action>
+        </keybind>
+        <keybind key="W-3">
+            <action name="GoToDesktop"><to>3</to></action>
+        </keybind>
+        <keybind key="W-4">
+            <action name="GoToDesktop"><to>4</to></action>
+        </keybind>
+        <keybind key="W-5">
+            <action name="GoToDesktop"><to>5</to></action>
+        </keybind>
+        <keybind key="W-6">
+            <action name="GoToDesktop"><to>6</to></action>
+        </keybind>
+        <keybind key="W-7">
+            <action name="GoToDesktop"><to>7</to></action>
+        </keybind>
+        <keybind key="W-8">
+            <action name="GoToDesktop"><to>8</to></action>
+        </keybind>
+        <keybind key="W-9">
+            <action name="GoToDesktop"><to>9</to></action>
+        </keybind>
+        <keybind key="W-0">
+            <action name="GoToDesktop"><to>10</to></action>
+        </keybind>
+
         <keybind key="C-A-Right">
             <action name="DesktopRight"><wrap>no</wrap></action>
         </keybind>
