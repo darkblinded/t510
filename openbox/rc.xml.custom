@@ -182,7 +182,7 @@
 <keyboard>
 		<keybind key="C-A-R">
 			<action name="Execute">
-				<command>hptc-reset-display</command>
+				<command>openbox --restart</command>
 			</action>
 		</keybind>
 		<keybind key="C-A-F11">
@@ -219,7 +219,7 @@
         <!-- Universal -->
 		<keybind key="C-A-F12">
 			<action name="Execute">
-                <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+                <command>sh /usr/local/bin/togglekeybindings.sh</command>
 			</action>
 		</keybind>
         <keybind key="C-A-F9">

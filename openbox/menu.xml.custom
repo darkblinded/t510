@@ -13,7 +13,7 @@
  <!-- ADMINUSR -->
 	<item label = "Toggle custom keybindings">
     <action name="Execute">
-        <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+        <command>sh /usr/local/bin/togglekeybindings.sh</command>
     </action>
   </item>
  <!-- ADMINUSR -->
