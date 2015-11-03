@@ -27,12 +27,16 @@ main(){
 	# Config ########################################
 
 	# openbox
-	echo ln -s $BASEDIR/bin/togglekeybindings.sh /usr/local/bin/togglekeybindings.sh
-	echo ln -s $BASEDIR/openbox/rc.xml.original $HOME/.config/openbox/rc.xml.original
-	echo ln -s $BASEDIR/openbox/rc.xml.custom $HOME/.config/openbox/rc.xml.custom
-	echo ln -s $BASEDIR/openbox/menu.xml.original $HOME/.config/openbox/menu.xml.original
-	echo ln -s $BASEDIR/openbox/menu.xml.custom $HOME/.config/openbox/menu.xml.custom
-	echo /usr/local/bin/togglekeybindings.sh
+	echo sudo -u user ln -s $BASEDIR/bin/togglekeybindings.sh /usr/local/bin/togglekeybindings.sh
+    echo chmod a+x /usr/local/bin/togglekeybindings.sh
+	echo sudo -u user ln -s $BASEDIR/openbox/rc.xml.original $HOME/.config/openbox/rc.xml.original
+	echo sudo -u user ln -s $BASEDIR/openbox/rc.xml.custom $HOME/.config/openbox/rc.xml.custom
+	echo sudo -u user ln -s $BASEDIR/openbox/menu.xml.original $HOME/.config/openbox/menu.xml.original
+	echo sudo -u user ln -s $BASEDIR/openbox/menu.xml.custom $HOME/.config/openbox/menu.xml.custom
+    # Set root-owned links to prevent the hptc tools to change the link
+	echo ln -s $HOME/.config/openbox/rc.xml.lnk $HOME/.config/openbox/menu.xml
+	echo ln -s $HOME/.config/openbox/menu.xml.lnk $HOME/.config/openbox/menu.xml
+	echo sudo -u user /usr/local/bin/togglekeybindings.sh
 
 	# zsh
 	echo chsh -s /bin/zsh user
@@ -40,9 +44,8 @@ main(){
 	#sudo
 	echo groupadd wheel
 	echo usermod -aG wheel user
-	echo 'echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers'
+    echo -i sed '/%root/a  %wheel ALL=(ALL) ALL' /etc/sudoers
 	echo passwd user
-	#TODO find out if this prohibits htpc-dashbord
 
 	# vim
 	echo ln -s $BASEDIR/vim/vimrc $HOME/.vimrc
