@@ -29,13 +29,17 @@ main(){
     # openbox
     echo sudo -u user ln -s $BASEDIR/bin/togglekeybindings.sh /usr/local/bin/togglekeybindings.sh
     echo chmod a+x /usr/local/bin/togglekeybindings.sh
-    # Set root-owned links to prevent the hptc tools to change the link
-	echo ln -s $HOME/.config/openbox/rc.xml.lnk $HOME/.config/openbox/menu.xml
-	echo ln -s $HOME/.config/openbox/menu.xml.lnk $HOME/.config/openbox/menu.xml
     echo sudo -u user ln -s $BASEDIR/openbox/rc.xml.original $HOME/.config/openbox/rc.xml.original
     echo sudo -u user ln -s $BASEDIR/openbox/rc.xml.custom $HOME/.config/openbox/rc.xml.custom
     echo sudo -u user ln -s $BASEDIR/openbox/menu.xml.original $HOME/.config/openbox/menu.xml.original
     echo sudo -u user ln -s $BASEDIR/openbox/menu.xml.custom $HOME/.config/openbox/menu.xml.custom
+    # Set read-only config files with include-statement for the *.lnk files
+    # This is needed to prevent the hptc tools from altering the .xml files
+    # while still being able to change the config
+    echo cp $BASEDIR/openbox/rc.xml $HOME/.config/openbox/menu.xml
+    echo cp $BASEDIR/openbox/menu.xml $HOME/.config/openbox/menu.xml
+    echo chattr +i $HOME/.config/openbox/rc.xml
+    echo chattr +i $HOME/.config/openbox/menu.xml
     echo sudo -u user /usr/local/bin/togglekeybindings.sh
 
     # zsh
