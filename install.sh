@@ -21,7 +21,7 @@ main(){
 
     # Install #######################################
 
-    echo apt-get install man-db manpages git zsh sudo $VIM
+    echo apt-get install man-db manpages git zsh sudo $VIM dmenu
 
 
     # Config ########################################
@@ -81,7 +81,7 @@ main(){
     fi
 
     if optyn "Install the enhanced desktop environment?"; then
-        DESKTOP="gcc tint2 feh dmenu rxvt-unicode"
+        DESKTOP="gcc tint2 feh rxvt-unicode"
     else
         DESKTOP=""
     fi
@@ -91,21 +91,30 @@ main(){
 
     echo apt-get install $HTOP $RANGER $DESKTOP
 
-    # oh-my-zsh
-    if optyn "Install the enhanced desktop environment?"; then
-        echo git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-        echo mv $HOME/.zshrc $HOME/.zshrc.original
-        echo cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
-        echo sed -i 's/ZSH_THEME="cf-magic"/ZSH_THEME="af-magic"/g' $HOME/.zshrc
-    fi
 
 
     # Config ########################################
 
-    #TODO urxvt-config
-    #TODO zsh theme
-    #TODO autorun
-    #TODO tint2 launcher
+    # Enhanced desktop environment
+    if [ "$DESKTOP" = "" ]; then
+        # oh-my-zsh
+        echo git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+        echo mv $HOME/.zshrc $HOME/.zshrc.original
+        echo cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+        echo sed -i 's/ZSH_THEME="cf-magic"/ZSH_THEME="af-magic"/g' $HOME/.zshrc
+        #TODO zsh theme
+
+        # urxvt-config
+        echo "cat $BASEDIR/urxvt/Xresources >> $HOME/.Xresources"
+        echo mkdir $HOME/.Xresources.d
+        echo ln -s $BASEDIR/urxvt/urxvt.conf $HOME/.Xresources.d/urxvt.conf
+        echo ln -s $BASEDIR/urxvt/urxvt.color $HOME/.Xresources.d/urxvt.color
+        echo xrdb $HOME/.Xresources
+
+        #TODO autorun (xrdb, feh, tint2)
+        #TODO tint2 launcher
+
+    fi
 
 }
 
