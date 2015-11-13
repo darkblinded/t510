@@ -102,7 +102,6 @@ main(){
         echo mv $HOME/.zshrc $HOME/.zshrc.original
         echo cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
         echo sed -i 's/ZSH_THEME="cf-magic"/ZSH_THEME="af-magic"/g' $HOME/.zshrc
-        #TODO zsh theme
 
         # urxvt-config
         echo "cat $BASEDIR/urxvt/Xresources >> $HOME/.Xresources"
@@ -111,7 +110,11 @@ main(){
         echo ln -s $BASEDIR/urxvt/urxvt.color $HOME/.Xresources.d/urxvt.color
         echo xrdb $HOME/.Xresources
 
-        #TODO autorun (xrdb, feh, tint2)
+        # autorun
+        echo cp ln -s $BASEDIR/Xsession.d/45enhanced-desktop-environment /etc/X11/Xsession.d/45enhanced-desktop-environment
+        echo cp $BASEDIR/wallpaper.jpg $HOME/.conf/wallpaper.jpg
+
+        echo To set another desktop image simply replace ~/.config/wallpaper.jpg or alter /etc/X11/Xsession.d/45enhanced-desktop-environment
         #TODO tint2 launcher
 
     fi
