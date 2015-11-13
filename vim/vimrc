@@ -65,6 +65,10 @@ set t_Co=256
 " #########################################################
 " Misc
 " #########################################################
+" Inverse colors for visual and search
+hi Visual cterm=reverse
+hi Search cterm=reverse
+
 " Showing line numbers and length
 set number
 set tw=79
