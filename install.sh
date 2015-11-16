@@ -117,6 +117,7 @@ main(){
         echo sudo -u user ln -s $BASEDIR/urxvt/urxvt.conf $HOME/.Xresources.d/urxvt.conf
         echo sudo -u user ln -s $BASEDIR/urxvt/urxvt.color $HOME/.Xresources.d/urxvt.color
         echo xrdb $HOME/.Xresources
+        echo sudo -u user sed -i 's/xterm/urxvt/g' $HOME/.config/openbox/menu.xml.custom
 
         # autorun
         echo ln -s $BASEDIR/Xsession.d/45enhanced-desktop-environment /etc/X11/Xsession.d/45enhanced-desktop-environment
