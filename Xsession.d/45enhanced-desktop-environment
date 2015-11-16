@@ -1,8 +1,6 @@
 # part of t510-scripts
 # github.com/darkblinded/t510
 
-pkill hptc-dashbord
-
 xrdb ~/.Xresources
 feh --bg-scale ~/.config/wallpaper.jpg
 
