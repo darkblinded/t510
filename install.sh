@@ -115,7 +115,13 @@ main(){
         echo cp $BASEDIR/wallpaper.jpg $HOME/.conf/wallpaper.jpg
 
         echo To set another desktop image simply replace ~/.config/wallpaper.jpg or alter /etc/X11/Xsession.d/45enhanced-desktop-environment
-        #TODO tint2 launcher
+
+        # tint2
+        echo mv $HOME/.config/tint2/tint2rc $HOME/.config/tint2/tint2rc.original
+        echo ln -s $BASEDIR/tint2/tint2rc $HOME/.config/tint2/tint2rc
+        echo ln -s $BASEDIR/tint2/hptc-kiosk.desktop $HOME/.config/tint2/hptc-kiosk.desktop
+        echo ln -s $BASEDIR/tint2/hptc-search.desktop $HOME/.config/tint2/hptc-search.desktop
+        echo ln -s $BASEDIR/tint2/hptc-switch-admin.desktop $HOME/.config/tint2/hptc-switch-admin.desktop
 
     fi
 

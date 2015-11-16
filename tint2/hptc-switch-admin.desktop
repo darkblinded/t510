@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Exec=/usr/bin/hptc-switch-admin
+Icon=/usr/share/pixmaps/ssocredstore.png
+Categories=X-XFCE;X-Xfce-Toplevel;
+StartupNotify=false
+OnlyShowIn=XFCE;
+Name=Administrator/User Mode Switch
+Name[de]=Wechsel zwischen Administrator-/Benutzermodus
+Name[es]=Interruptor de Modo Administrador/Usuario
+Name[fr]=Changement entre mode administrateur/utilisateur
+Name[ru]=Переключение режима Administrator/User
+Name[ja]=管理者/ユーザー モード切り替え
+Name[ko]=관리자/사용자 모드 전환
+Name[zh_CN]=管理员/用户模式切换
+Name[zh_TW]=管理員/使用者模式切換
+X-HPTC-Category=Advanced
+# Translations verified: r8353
