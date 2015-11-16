@@ -85,6 +85,11 @@ main(){
 
     if optyn "Install the enhanced desktop environment?"; then
         DESKTOP="gcc tint2 feh rxvt-unicode"
+        if optyn "Install the i3lock screen locker?"; then
+            SCREENLOCK="i3lock imagemagick fonts-liberation"
+        else
+            SCREENLOCK=""
+        fi
     else
         DESKTOP=""
     fi
@@ -92,7 +97,7 @@ main(){
 
     # install #######################################
 
-    echo apt-get install $HTOP $RANGER $DESKTOP
+    echo apt-get install $HTOP $RANGER $DESKTOP $SCREENLOCK
 
 
 
@@ -128,6 +133,12 @@ main(){
         echo sudo -u ln -s $BASEDIR/tint2/hptc-search.desktop $HOME/.config/tint2/hptc-search.desktop
         echo sudo -u ln -s $BASEDIR/tint2/hptc-switch-admin.desktop $HOME/.config/tint2/hptc-switch-admin.desktop
 
+    fi
+
+    # i3lock
+    if [ "$SCREENLOCK" != "" ]; then
+        echo ln -s $BASEDIR/i3lock/lock /usr/local/bin/lock
+        echo sudo -u user ln -s $BASEDIR/urxvt/urxvt.color $HOME/.config/lock.png
     fi
 
 }

@@ -249,6 +249,11 @@
 				<command>xterm</command>
 			</action>
 		</keybind>
+        <keybind key="W-L">
+            <action name="Execute">
+                <command>lock</command>
+            </action>
+        </keybind>
 
         <!-- OpenBox -->
 		<keybind key="W-S-R">
