@@ -125,17 +125,17 @@ main(){
         # autorun
         ln -s $BASEDIR/Xsession.d/45enhanced-desktop-environment /etc/X11/Xsession.d/45enhanced-desktop-environment
         sed -i 's/sudo hptc-dashboard/#sudo hptc-dashboard/' /etc/X11/Xsession.d/43hptc-dashboard
-        sudo -u cp $BASEDIR/wallpaper.jpg $HOME/.conf/wallpaper.jpg
+        sudo -u user cp $BASEDIR/wallpaper.jpg $HOME/.conf/wallpaper.jpg
 
         echo To set another desktop image simply replace ~/.config/wallpaper.jpg or alter /etc/X11/Xsession.d/45enhanced-desktop-environment
 
         # tint2
-        sudo -u mkdir $HOME/.config/tint2
-        sudo -u mv $HOME/.config/tint2/tint2rc $HOME/.config/tint2/tint2rc.original
-        sudo -u ln -s $BASEDIR/tint2/tint2rc $HOME/.config/tint2/tint2rc
-        sudo -u ln -s $BASEDIR/tint2/hptc-kiosk.desktop $HOME/.config/tint2/hptc-kiosk.desktop
-        sudo -u ln -s $BASEDIR/tint2/hptc-search.desktop $HOME/.config/tint2/hptc-search.desktop
-        sudo -u ln -s $BASEDIR/tint2/hptc-switch-admin.desktop $HOME/.config/tint2/hptc-switch-admin.desktop
+        sudo -u user mkdir $HOME/.config/tint2
+        sudo -u user mv $HOME/.config/tint2/tint2rc $HOME/.config/tint2/tint2rc.original
+        sudo -u user ln -s $BASEDIR/tint2/tint2rc $HOME/.config/tint2/tint2rc
+        sudo -u user ln -s $BASEDIR/tint2/hptc-kiosk.desktop $HOME/.config/tint2/hptc-kiosk.desktop
+        sudo -u user ln -s $BASEDIR/tint2/hptc-search.desktop $HOME/.config/tint2/hptc-search.desktop
+        sudo -u user ln -s $BASEDIR/tint2/hptc-switch-admin.desktop $HOME/.config/tint2/hptc-switch-admin.desktop
 
     fi
 
