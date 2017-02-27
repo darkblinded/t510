@@ -6,6 +6,8 @@ BASEDIR="$(dirname $(readlink -nf "$0"))"
 main(){
     fsunlock
 
+    ntpdate pool.ntp.org
+
     apt-get update
 
     # MANDATORY ###################################################################
@@ -21,7 +23,7 @@ main(){
 
     # Install #######################################
 
-    apt-get install man-db manpages git zsh sudo $VIM dmenu
+    apt-get install man-db manpages coreutils build-essential git zsh sudo $VIM dmenu
 
 
     # Config ########################################
