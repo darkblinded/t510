@@ -45,10 +45,10 @@ launcher_icon_theme = gnome
 launcher_padding = 2 2
 launcher_background_id = 1
 launcher_icon_size = 20
-launcher_item_app = /home/user/t510/tint2/hptc-search.desktop
+launcher_item_app = /home/user/.config/tint2/hptc-search.desktop
 launcher_item_app = /usr/share/applications/firefox.desktop
-launcher_item_app = /home/user/t510/tint2/hptc-switch-admin.desktop
-launcher_item_app = /home/user/t510/tint2/hptc-kiosk.desktop
+launcher_item_app = /home/user/.config/tint2/hptc-switch-admin.desktop
+launcher_item_app = /home/user/.config/tint2/hptc-kiosk.desktop
 
 
 # Taskbar
