@@ -137,6 +137,12 @@ main(){
         sudo -u user ln -s $BASEDIR/tint2/hptc-search.desktop $HOME/.config/tint2/hptc-search.desktop
         sudo -u user ln -s $BASEDIR/tint2/hptc-switch-admin.desktop $HOME/.config/tint2/hptc-switch-admin.desktop
 
+        if optyn "Disable hptc-dashboard?"; then
+            sudo mv /usr/bin/hptc-dashboard /usr/bin/hptc-dashboard_
+            sudo ln -s /bin/true /usr/bin/hptc-dashboard
+        fi
+
+
     fi
 
     # i3lock
