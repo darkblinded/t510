@@ -54,7 +54,7 @@ main(){
     usermod -aG wheel user
     sed -i '/%root/a  %wheel ALL=(ALL) ALL' /etc/sudoers
     sed -i 's/timestamp_timeout = 0/timestamp_timeout = 4/' /etc/sudoers
-    passwd user
+    hptc-security
 
     # vim
     sudo -u user ln -s $BASEDIR/vim/vimrc $HOME/.vimrc
