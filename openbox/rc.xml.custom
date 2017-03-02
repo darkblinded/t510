@@ -306,6 +306,52 @@
             <action name="Maximize"/>
         </keybind>
 
+        <keybind key="C-W-S-Left">
+            <action name="ResizeRelative">
+                <right>-10</right>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Right">
+            <action name="ResizeRelative">
+                <right>10</right>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Down">
+            <action name="ResizeRelative">
+                <bottom>10</bottom>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Up">
+            <action name="ResizeRelative">
+                <bottom>-10</bottom>
+            </action>
+        </keybind>
+
+        <keybind key="C-W-Left">
+            <action name="MoveRelative">
+                <x>-10</x>
+                <y>0</y>
+            </action>
+        </keybind>
+        <keybind key="C-W-Right">
+            <action name="MoveRelative">
+                <x>10</x>
+                <y>0</y>
+            </action>
+        </keybind>
+        <keybind key="C-W-Down">
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>10</y>
+            </action>
+        </keybind>
+        <keybind key="C-W-Up">
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>-10</y>
+            </action>
+        </keybind>
+
         <keybind key="W-F12">
             <action name="AddDesktop">
                 <where>current</where>
