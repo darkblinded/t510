@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Exec=/usr/bin/hptc-search
+Icon=/usr/share/pixmaps/search.png
+Categories=X-XFCE;X-Xfce-Toplevel;
+StartupNotify=false
+OnlyShowIn=XFCE;
+Name=ThinPro Search
+#Name[de]=Neu starten
+#Name[es]=Reinicialización
+#Name[fr]=Redémarrage
+#Name[ru]=Перезагрузка
+#Name[ja]=再起動
+#Name[ko]=재부팅
+#Name[zh_CN]=重新启动
+#Name[zh_TW]=重新開機
+# Translations verified: r8352

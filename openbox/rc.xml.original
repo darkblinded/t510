@@ -219,7 +219,7 @@
         <!-- Universal -->
 		<keybind key="C-A-F12">
 			<action name="Execute">
-                <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+                <command>sh /usr/local/bin/togglekeybindings.sh</command>
 			</action>
 		</keybind>
         <keybind key="C-A-F9">

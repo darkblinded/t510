@@ -13,7 +13,7 @@
  <!-- ADMINUSR -->
 	<item label = "Administrator/User Mode Switch">
     <action name="Execute">
-      <command>/usr/bin/sudo /usr/bin/hptc-sudo-gate /usr/bin/hptc-switch-admin</command>
+      <command>/usr/bin/hptc-switch-admin</command>
     </action>
   </item>
   <separator/>

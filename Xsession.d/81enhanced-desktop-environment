@@ -1,0 +1,6 @@
+# part of t510-scripts
+# github.com/darkblinded/t510
+
+feh --bg-scale ~/.config/wallpaper.jpg >> /tmp/blafutest
+
+tint2 &

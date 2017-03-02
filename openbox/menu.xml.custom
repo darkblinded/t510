@@ -13,13 +13,13 @@
  <!-- ADMINUSR -->
 	<item label = "Toggle custom keybindings">
     <action name="Execute">
-        <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+        <command>sh /usr/local/bin/togglekeybindings.sh</command>
     </action>
   </item>
  <!-- ADMINUSR -->
 	<item label = "Administrator/User Mode Switch">
     <action name="Execute">
-      <command>/usr/bin/sudo /usr/bin/hptc-sudo-gate /usr/bin/hptc-switch-admin</command>
+      <command>/usr/bin/hptc-switch-admin</command>
     </action>
   </item>
 

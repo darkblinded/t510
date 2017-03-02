@@ -182,7 +182,7 @@
 <keyboard>
 		<keybind key="C-A-R">
 			<action name="Execute">
-				<command>hptc-reset-display</command>
+				<command>openbox --restart</command>
 			</action>
 		</keybind>
 		<keybind key="C-A-F11">
@@ -219,7 +219,7 @@
         <!-- Universal -->
 		<keybind key="C-A-F12">
 			<action name="Execute">
-                <command>sh /writable/home/user/bin/togglekeybindings.sh</command>
+                <command>sh /usr/local/bin/togglekeybindings.sh</command>
 			</action>
 		</keybind>
         <keybind key="C-A-F9">
@@ -232,6 +232,23 @@
                 <command>urxvt</command>
 			</action>
 		</keybind>
+
+        <!-- Pulseaudio -->
+        <keybind key="XF86AudioRaiseVolume">
+            <action name="Execute">
+                <command>amixer -D pulse set Master 5%+ unmute</command>
+            </action>
+        </keybind>
+        <keybind key="XF86AudioLowerVolume">
+            <action name="Execute">
+                <command>amixer -D pulse set Master 5%- unmute</command>
+            </action>
+        </keybind>
+        <keybind key="XF86AudioMute">
+            <action name="Execute">
+                <command>amixer -D pulse set Master toggle</command>
+            </action>
+        </keybind>
 
         <!-- Programs -->
 		<keybind key="W-D">
@@ -249,6 +266,11 @@
 				<command>xterm</command>
 			</action>
 		</keybind>
+        <keybind key="W-L">
+            <action name="Execute">
+                <command>lock</command>
+            </action>
+        </keybind>
 
         <!-- OpenBox -->
 		<keybind key="W-S-R">
@@ -277,6 +299,12 @@
 				<dialog>yes</dialog>
 			</action>
 		</keybind>
+        <keybind key="W-S-Down">
+            <action name="Unmaximize"/>
+        </keybind>
+        <keybind key="W-S-Up">
+            <action name="Maximize"/>
+        </keybind>
 
         <keybind key="W-F12">
             <action name="AddDesktop">
@@ -313,6 +341,36 @@
         </keybind>
         <keybind key="W-0">
             <action name="GoToDesktop"><to>10</to></action>
+        </keybind>
+		<keybind key="W-S-1">
+            <action name="SendToDesktop"><to>1</to></action>
+        </keybind>
+		<keybind key="W-S-2">
+            <action name="SendToDesktop"><to>2</to></action>
+        </keybind>
+		<keybind key="W-S-3">
+            <action name="SendToDesktop"><to>3</to></action>
+        </keybind>
+		<keybind key="W-S-4">
+            <action name="SendToDesktop"><to>4</to></action>
+        </keybind>
+		<keybind key="W-S-5">
+            <action name="SendToDesktop"><to>5</to></action>
+        </keybind>
+		<keybind key="W-S-6">
+            <action name="SendToDesktop"><to>6</to></action>
+        </keybind>
+		<keybind key="W-S-7">
+            <action name="SendToDesktop"><to>7</to></action>
+        </keybind>
+		<keybind key="W-S-8">
+            <action name="SendToDesktop"><to>8</to></action>
+        </keybind>
+		<keybind key="W-S-9">
+            <action name="SendToDesktop"><to>9</to></action>
+        </keybind>
+		<keybind key="W-S-0">
+            <action name="SendToDesktop"><to>10</to></action>
         </keybind>
 
         <keybind key="C-A-Right">
@@ -588,6 +646,14 @@
     <skip_taskbar>yes</skip_taskbar>
     <focus>no</focus>
   </application>
+
+  <application name="hptc-kiosk" class="Hptc-kiosk">
+    <size>
+      <width>default</width>
+      <height>500</height>
+    </size>
+  </application>
+
 </applications>
 
 </openbox_config>
