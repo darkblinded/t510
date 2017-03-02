@@ -646,6 +646,14 @@
     <skip_taskbar>yes</skip_taskbar>
     <focus>no</focus>
   </application>
+
+  <application name="hptc-kiosk" class="Hptc-kiosk">
+    <size>
+      <width>default</width>
+      <height>500</height>
+    </size>
+  </application>
+
 </applications>
 
 </openbox_config>
