@@ -123,7 +123,8 @@ main(){
         sudo -u user sed -i 's/xterm/urxvt/g' $HOME/.config/openbox/menu.xml.custom
 
         # autorun
-        ln -s $BASEDIR/Xsession.d/45enhanced-desktop-environment /etc/X11/Xsession.d/45enhanced-desktop-environment
+        ln -s $BASEDIR/Xsession.d/44enhanced-desktop-environment /etc/X11/Xsession.d/44enhanced-desktop-environment
+        ln -s $BASEDIR/Xsession.d/81enhanced-desktop-environment /etc/X11/Xsession.d/81enhanced-desktop-environment
         sed -i 's/sudo hptc-dashboard/#sudo hptc-dashboard/' /etc/X11/Xsession.d/43hptc-dashboard
         sudo -u user cp $BASEDIR/wallpaper.jpg $HOME/.conf/wallpaper.jpg
 

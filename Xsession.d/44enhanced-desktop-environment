@@ -2,6 +2,5 @@
 # github.com/darkblinded/t510
 
 xrdb ~/.Xresources
-feh --bg-scale ~/.config/wallpaper.jpg
 
-tint2 &
+
