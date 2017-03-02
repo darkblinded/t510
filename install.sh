@@ -152,6 +152,9 @@ main(){
         sudo -u user ln -s $BASEDIR/urxvt/urxvt.color $HOME/.config/lock.png
     fi
 
+    echo "########################"
+    echo "Finished. Please reboot."
+
 }
 
 leave(){
