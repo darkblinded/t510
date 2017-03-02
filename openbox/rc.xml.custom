@@ -299,6 +299,12 @@
 				<dialog>yes</dialog>
 			</action>
 		</keybind>
+        <keybind key="W-S-Down">
+            <action name="Unmaximize"/>
+        </keybind>
+        <keybind key="W-S-Up">
+            <action name="Maximize"/>
+        </keybind>
 
         <keybind key="W-F12">
             <action name="AddDesktop">
