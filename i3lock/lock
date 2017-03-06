@@ -15,6 +15,12 @@ BLURTYPE="2x8" # 2.90s
 #BLURTYPE="2x3" # 2.92s
 
 scrot $IMAGE
-convert $IMAGE -level 0%,100%,0.6 -blur $BLURTYPE -font Liberation-Sans -pointsize 26 -fill white -gravity center -annotate +0+200 'Type password to unlock' - | composite -gravity center ~/.config/lock.png - $IMAGE
+
+# Simple version
+convert $IMAGE -level 0%,100%,0.6 -blur $BLURTYPE $IMAGE
+
+# Annotated version (single screen only)
+#convert $IMAGE -level 0%,100%,0.6 -blur $BLURTYPE -font Liberation-Sans-Regular -pointsize 26 -fill white -gravity center -annotate +0+200 'Type password to unlock' - | composite -gravity center ~/.config/lock.png - $IMAGE
+
 i3lock -i $IMAGE
 rm $IMAGE

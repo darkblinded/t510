@@ -279,6 +279,9 @@
 		<keybind key="W-S-Q">
 			<action name="Close"/>
 		</keybind>
+		<keybind key="W-F">
+			<action name="ToggleFullscreen"/>
+		</keybind>
 		<keybind key="W-Up">
 			<action name="DirectionalFocusNorth">
 				<dialog>yes</dialog>
@@ -299,11 +302,51 @@
 				<dialog>yes</dialog>
 			</action>
 		</keybind>
+
+        <keybind key="C-W-S-Left">
+            <action name="ResizeRelative">
+                <right>-10</right>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Right">
+            <action name="ResizeRelative">
+                <right>10</right>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Down">
+            <action name="ResizeRelative">
+                <bottom>10</bottom>
+            </action>
+        </keybind>
+        <keybind key="C-W-S-Up">
+            <action name="ResizeRelative">
+                <bottom>-10</bottom>
+            </action>
+        </keybind>
+
+        <keybind key="W-S-Left">
+            <action name="MoveRelative">
+                <x>-10</x>
+                <y>0</y>
+            </action>
+        </keybind>
+        <keybind key="W-S-Right">
+            <action name="MoveRelative">
+                <x>10</x>
+                <y>0</y>
+            </action>
+        </keybind>
         <keybind key="W-S-Down">
-            <action name="Unmaximize"/>
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>10</y>
+            </action>
         </keybind>
         <keybind key="W-S-Up">
-            <action name="Maximize"/>
+            <action name="MoveRelative">
+                <x>0</x>
+                <y>-10</y>
+            </action>
         </keybind>
 
         <keybind key="W-F12">
