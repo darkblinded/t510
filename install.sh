@@ -149,7 +149,7 @@ main(){
     # i3lock
     if [ "$SCREENLOCK" != "" ]; then
         ln -s $BASEDIR/i3lock/lock /usr/local/bin/lock
-        sudo -u user ln -s $BASEDIR/urxvt/urxvt.color $HOME/.config/lock.png
+        sudo -u user ln -s $BASEDIR/i3lock/lock.png $HOME/.config/lock.png
     fi
 
     echo "########################"
